@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-font: 'Outfit', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  color: #333333;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+  border-inline: none !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 30%, #ffc107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effects & micro-animations */
+.hover-scale {
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.hover-shadow {
+  transition: all var(--transition-speed) ease;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.text-warning-glow {
+  text-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+  animation: pulse-glow 3s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(255, 193, 7, 0.6));
+  }
+}
+
+/* Navigation enhancements */
+.nav-link {
+  font-weight: 500;
+  transition: color var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Custom cards */
+.card {
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* Badges typography */
+.fs-7 {
+  font-size: 0.85rem;
+}
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+/* Utility classes */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
